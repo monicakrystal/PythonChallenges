@@ -55,5 +55,5 @@ def diff21(n):
     elif n < 21:
         return 21 - n
 
-n = 1
-result = console.log(diff21(n))
+result = diff21(23)
+print(result)

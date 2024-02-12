@@ -74,3 +74,12 @@ def makes10(a, b):
 a = 5
 b = 5
 print(makes10(a, b))
+
+
+# create a function that checks if a string begins with "saucy" & returns string
+# if it doesn't, add "saucy" and then return it
+
+def addSauce(str):
+    return str if str.startswith("saucy") else "saucy " + str
+
+print(addSauce("pizza"))

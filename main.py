@@ -83,3 +83,66 @@ def addSauce(str):
     return str if str.startswith("saucy") else "saucy " + str
 
 print(addSauce("pizza"))
+
+def addSauceTrue(str):
+    return str.startswith("pizza", 6)
+
+print(addSauceTrue("saucy pizza"))
+
+
+# make a function that capitalizes the first letter in a string
+def test_word(str):
+    return str.capitalize();
+
+print(test_word("there"))
+
+
+# Given a string of even length,
+# return the first half. So the string "WooHoo" yields "Woo".
+
+# first_half('WooHoo') → 'Woo'
+# first_half('HelloThere') → 'Hello'
+# first_half('abcdef') → 'abc'
+
+def first_half(str):
+  first = len(str) // 2
+  print(first)
+  return str[:first]
+
+print(first_half("WooHoo"))
+
+# second way
+
+def first_part(str):
+    return str[:len(str)//2]
+
+print(first_part("YeeHah"))
+
+
+# Given 2 strings, return their concatenation, except omit
+# the first char of each. The strings will be at least length 1.
+
+# non_start('Hello', 'There') → 'ellohere'
+# non_start('java', 'code') → 'avaode'
+# non_start('shotl', 'java') → 'hotlava'
+
+def non_start(a, b):
+    return a[0::2] + b[1:]
+
+print(non_start("Code", "there"))
+
+
+
+# Given a string, return a new string made of 3 copies
+# of the last 2 chars of the original string.
+# The string length will be at least 2.
+
+# extra_end('Hello') → 'lololo'
+# extra_end('ab') → 'ababab'
+# extra_end('Hi') → 'HiHiHi'
+
+def extra_end(str):
+    return str[-2:] + str[-2:] + str[-2:]
+
+
+print(extra_end("hello"))

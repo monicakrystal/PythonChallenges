@@ -1,3 +1,4 @@
+from Vehicle import Vehicle
 
 # The parameter weekday is True if it is a weekday,
 # and the parameter vacation is True if we are on vacation.
@@ -145,7 +146,7 @@ def extra_end(str):
     return str[-2:] + str[-2:] + str[-2:]
 
 
-print(extra_end("hello"))
+# print(extra_end("hello"))
 
 
 # The web is built with HTML strings like "<i>Yay</i>"
@@ -161,4 +162,50 @@ print(extra_end("hello"))
 def make_tags(tag, word):
   return "<" + tag + ">" + word + "<" + "/" + tag + ">"
 
-print(make_tags("i", "hello"))
+# print(make_tags("i", "hello"))
+
+# playing with objects
+if __name__ == "__main__":
+
+    # my_car = Vehicle(5, "toyota", "camry", "white", 2016)
+
+    # my_car.display_info()
+    # print(f"This car is {my_car.get_year()}")
+
+    # print(f"The car is {my_car.get_color()}")
+
+    # my_car.set_color("black")
+
+    # my_car.display_info()
+
+    # print("Flashcard1, science, what is an atom?, a small thing")
+
+# Given a non-empty string and an int n, return a new string where the
+# char at index n has been removed. The value of n will be a valid index
+# of a char in the original string (n will be in the range 0..len(str)-1 inclusive).
+
+# missing_char('kitten', 1) → 'ktten'
+# missing_char('kitten', 0) → 'itten'
+# missing_char('kitten', 4) → 'kittn
+
+    def missing_char(str, num):
+        front = str[:num]
+        back = str[num + 1:]
+        return front + back
+
+    print(missing_char("kitten", 1))
+
+
+
+# Given a string, return a new string where the first and last chars have been exchanged.
+
+# front_back('code') → 'eodc'
+# front_back('a') → 'a'
+# front_back('ab') → 'ba'
+
+def front_back(str):
+    if len(str) <= 1:
+        return str
+    return str[-1:] + str[1:-1] + str[0]
+
+print(front_back("code"))

@@ -1,4 +1,10 @@
 class Vehicle:
+    seats = 0
+    make = ""
+    model = ""
+    color = ""
+    year = 0
+
     def __init__(self, seats, make, model, color, year):
         self.seats = seats
         self.make = make
